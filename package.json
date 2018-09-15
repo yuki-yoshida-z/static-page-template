@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/yuki-yoshida-z/static-page-template#readme",
   "dependencies": {
+    "lodash.update": "^4.10.2",
     "npm": "^6.4.1"
   },
   "devDependencies": {
