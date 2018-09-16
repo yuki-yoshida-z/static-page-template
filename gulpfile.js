@@ -1,14 +1,26 @@
-// gulpプラグインの読み込み
-const gulp = require('gulp');
-// Sassをコンパイルするプラグインの読み込み
-const sass = require('gulp-sass');
 
-// style.scssをタスクを作成する
-gulp.task('default', function () {
-  // style.scssファイルを取得
-  gulp.src('dev/sass/style.sass')
-    // Sassのコンパイルを実行
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const coffee = require('gulp-coffee');
+const slim = require('gulp-slim');
+// sass -> css
+gulp.task('build-css', function(){
+  return gulp.src('dev/sass/style.sass')
     .pipe(sass())
-    // cssフォルダー以下に保存
     .pipe(gulp.dest('production/css/'));
 });
+
+// coffee -> javasxript
+gulp.task('build-js', function(){
+  return gulp.src('dev/coffee/script.coffee')
+    .pipe(coffee())
+    .pipe(gulp.dest('production/js/'));
+});
+
+// slim -> html
+gulp.task('build-html', function(){
+  return gulp.src('dev/')
+    .pipe(slim())
+    .pipe(gulp.dest('production/'));
+});
+
