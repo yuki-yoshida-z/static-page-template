@@ -1,6 +1,6 @@
 (function() {
   $(function() {
-    return console.log("test");
+    return console.log("testt");
   });
 
 }).call(this);
