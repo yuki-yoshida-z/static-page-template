@@ -28,6 +28,11 @@ gulp.task('build-html', function(){
     .pipe(gulp.dest('production/'));
 });
 
+gulp.task('watch', function(){
+  gulp.watch('dev/sass/*.sass', gulp.parallel('build-css'));
+  gulp.watch('dev/coffee/*.coffee', gulp.parallel('build-js'));
+  gulp.watch('dev/*.slim', gulp.parallel('build-html'));
+});
 
 gulp.task('default', gulp.series( gulp.parallel('build-css', 'build-js', 'build-html')));
 

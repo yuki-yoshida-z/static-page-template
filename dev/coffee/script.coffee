@@ -1,4 +1,4 @@
 $ ->
-  console.log "testt"
+  console.log "tstt"
 
 
