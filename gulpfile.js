@@ -1,4 +1,3 @@
-
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const coffee = require('gulp-coffee');
@@ -6,7 +5,7 @@ const slim = require('gulp-slim');
 const autoprefixer = require('gulp-autoprefixer');
 // sass -> css
 gulp.task('build-css', function(){
-  return gulp.src('dev/sass/style.sass')
+  return gulp.src('dev/sass/*.sass')
     //cssをsassへ変換
     .pipe(sass())
     //ベンダープレフィックス付与
@@ -16,7 +15,7 @@ gulp.task('build-css', function(){
 
 // coffee -> javasxript
 gulp.task('build-js', function(){
-  return gulp.src('dev/coffee/script.coffee')
+  return gulp.src('dev/coffee/*.coffee')
     .pipe(coffee())
     .pipe(gulp.dest('production/js/'));
 });

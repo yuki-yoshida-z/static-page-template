@@ -1,13 +1,38 @@
+- Sitename = "sitename"
+- Pageurl = "pageurl"
+- Title = "Title"
+- Description = "description"
+- Canonicalurl = "canonical"
+
 doctype html
-html
+html lang="ja" prefix="og: http://ogp.me/ns#"
   head
+    link rel="canonical" href = Canonicalurl
     meta charset="utf-8"
-    title タイ
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    title = Title
+    meta name="description" content = Description
+    meta property="og:type" content="website"
+    meta property="og:site_name" content = Sitename
+    meta property="og:url" content = Pageurl
+    meta property="og:title" content = Title
+    meta property="og:description" content = Description
+    meta property="og:image" content = "#{Pageurl}images/ogp.png"
+    meta property="og:locale" content="ja_JP"
+    script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+    script src="js/script.js"
+    link rel="stylesheet" href="css/reset.css"
+    link rel="stylesheet" href="css/style.css"
   body
     header
-      p メインテキスト
+      h1 ヘッダー
+
     .content
-      p テスト
+      h2 コンテンツ
+
     footer
-      p テス
+      h2 フッター
+
+
+
 
