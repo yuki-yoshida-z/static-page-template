@@ -1,11 +1,19 @@
 body {
-  background-colro: #eee; }
+  background-colro: #eee;
+}
 
 header {
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 .test {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #000; }
+  color: #000;
+}
+
+.test2 {
+  display: block;
+  background-color: #fff;
+}

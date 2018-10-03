@@ -7,7 +7,9 @@ const autoprefixer = require('gulp-autoprefixer');
 gulp.task('build-css', function(){
   return gulp.src('dev/sass/*.sass')
     //cssをsassへ変換
-    .pipe(sass())
+    .pipe(sass({
+      outputStyle: 'expanded'
+    })).on('error',sass.logError)
     //ベンダープレフィックス付与
     .pipe(autoprefixer(['last 2 versions']))
     .pipe(gulp.dest('production/css/'));
